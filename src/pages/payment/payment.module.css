@@ -1,0 +1,156 @@
+:root {
+    --primary-color: #febd69;
+    --primary-shade: #d49644;
+  }
+
+.payment_header {
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    background-color: rgb(234, 237, 237);
+  }
+  
+  .payment {
+    padding: 30px;
+  }
+  
+  .flex {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+  }
+  
+  .flex h3 {
+    min-width: 300px;
+  }
+  
+  .flex img {
+    width: 80px !important;
+  }
+  
+  .flex div {
+    height: auto !important;
+  }
+
+   .payment_card_container{
+    max-width: 400px;
+    width: 100%;
+   }
+/* .payment_details{
+    font-size: 20px;
+} */
+ .payment_price{
+    padding: 20px;
+ }
+ .payment_price > div{
+  display: flex;
+  font-size: 16px;
+  gap: 10px;
+ }
+ .payment_details button{
+    margin-top: 15px;
+    width: 100%;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 8px 10px;
+    cursor: pointer;
+ }
+ .payment_details button:hover{
+    background-color: var(--primary-shade);
+ }
+
+.loader{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    color: rgb(52,52,52);
+}
+
+
+
+
+
+  
+  /* Media Queries */
+  
+  /* For mobile devices (max-width: 600px) */
+  @media screen and (max-width: 600px) {
+    .payment_header {
+      font-size: 18px;
+      padding: 15px;
+    }
+  
+    .payment {
+      padding: 15px;
+    }
+  
+    .flex {
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px;
+    }
+  
+    .flex h3 {
+      min-width: auto;
+      font-size: 18px;
+    }
+  
+    .flex img {
+      width: 60px !important;
+    }
+  }
+  
+  /* For tablets (min-width: 601px and max-width: 900px) */
+  @media screen and (min-width: 601px) and (max-width: 900px) {
+    .payment_header {
+      font-size: 20px;
+      padding: 18px;
+    }
+  
+    .payment {
+      padding: 20px;
+    }
+  
+    .flex {
+      flex-direction: column;
+      gap: 15px;
+      padding: 25px;
+    }
+  
+    .flex h3 {
+      min-width: 250px;
+    }
+  
+    .flex img {
+      width: 70px !important;
+    }
+  }
+  
+  /* For large devices (min-width: 901px) */
+  @media screen and (min-width: 901px) {
+    .payment_header {
+      font-size: 24px;
+      padding: 20px;
+    }
+  
+    .payment {
+      padding: 30px;
+    }
+  
+    .flex {
+      flex-direction: column;
+      gap: 20px;
+      padding: 30px;
+    }
+  
+    .flex h3 {
+      min-width: 300px;
+    }
+  
+    .flex img {
+      width: 80px !important;
+    }
+  }
+  

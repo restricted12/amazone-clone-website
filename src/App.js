@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect } from 'react';
+import RouterPage from '../src/router.jsx';
+import { DataContext } from './components/DataProvider/Data.jsx';
+import { Type } from './utilities/action.type.js';
+import { auth } from './utilities/firebase.js';
 
-function App() {
+function App() { 
+  const [{ user }, dispatch] = useContext(DataContext);
+
+  useEffect(() => {
+    // Subscribe to authentication state changes
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // If user is authenticated, update the context
+        dispatch({
+          type: Type.SET_USER,
+          user: authUser,
+        });
+      } else {
+        // If user is not authenticated, set user to null
+        dispatch({
+          type: Type.SET_USER,
+          user: null,
+        });
+      }
+    });
+
+    // Cleanup function to unsubscribe from auth listener
+    return () => unsubscribe();
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <RouterPage />
+    </>
   );
 }
 
