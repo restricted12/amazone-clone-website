@@ -1,7 +1,7 @@
 import React from 'react';
 import Classes from '../header/header.module.css';
 import { Link } from 'react-router-dom';
-import '../bootstrap.min.css';
+import '../bootstrap.css';
 
 function CatagoryCard({ data }) {
   return (
