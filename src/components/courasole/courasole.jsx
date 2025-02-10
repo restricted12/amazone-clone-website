@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import Classes from '../header/header.module.css';
 import { img } from './img/courasol.js';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import './bootstrap.css';
+// import './bootstrap.css';
 
 function CarouselComponent() {
   return (
