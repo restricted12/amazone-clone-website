@@ -2,7 +2,7 @@ import React from 'react';
 import { catagory } from '../../components/Catagory/AllInfo'; // Ensure this matches your export
 import CatagoryCard from '../../components/Catagory/catagoryCard.jsx'; // Correct capitalization
 import Classes from '../header/header.module.css';
-import '../bootstrap.css';
+import './bootstrap.css';
 
 function Category() {
   return (
